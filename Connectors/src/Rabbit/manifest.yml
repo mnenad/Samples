@@ -1,6 +1,6 @@
 ---
 applications:
-- name: rabbit
+- name: rabbit-nm
   memory: 512M
   buildpack: https://github.com/cloudfoundry-community/asp.net5-buildpack.git
   command: ./Rabbit --server.urls "http://*:$PORT"

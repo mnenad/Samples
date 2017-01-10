@@ -19,9 +19,10 @@ You must first create an instance of the Rabbit service in a org/space.
 1. cf target -o myorg -s development
 2. cd samples/Connectors/src/Rabbit
 3. dotnet restore --configfile nuget.config
-4. dotnet publish -o $PWD/publish -f net451 -r win7-x64
+4. Publish app to a directory
+(e.g. `dotnet publish --output $PWD/publish --configuration Release --framework netcoreapp1.1 --runtime ubuntu.14.04-x64`)
 5. Push the app using the provided manifest.
- (e.g.  `cf push -f manifest.yml -p $PWD/publish` or `cf push -f manifest-windows.yml -p $PWD/publish )
+(e.g.  `cf push -f manifest.yml -p $PWD/publish` or `cf push -f manifest-windows.yml -p $PWD/publish )
 
 Note: The provided manifest will create an app named `rabbit` and attempt to bind to the the app to Rabbit service `myRabbitService`.
 
