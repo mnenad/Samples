@@ -1,6 +1,6 @@
 ---
 applications:
-- name: redis-connector
+- name: redis-connector-nm
   memory: 512M
   buildpack: https://github.com/cloudfoundry-community/asp.net5-buildpack.git
   command: ./Redis --server.urls "http://*:$PORT"
